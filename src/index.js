@@ -1,30 +1,36 @@
-import _ from 'lodash';
-import './style.css';
-import Icon from './img/icon.png';
-import Data from './xml/data.xml'
-import printMe from './print.js'
-if (process.env.NODE_ENV !== 'production') {
-   console.log('Looks like we are in development mode!');
-   }
+import item_name from './item_name/index'
+import './css/index.css';
+import cdiv from './createTarget/index'
+import index from './main/index.js'
+import router from './router/index'
 function component() {
-    var element = document.createElement('div');
-    var btn = document.createElement('button');
-    element.innerHTML = _.join(['Hello', 'webpack'], '');
-    element.classList.add('hello');
-    btn.innerHTML = 'Click me and check the console!';
-    btn.onclick = printMe;
-    element.appendChild(btn);
-    var myIcon = new Image();
-    myIcon.src = Icon;
-    element.appendChild(myIcon);
-    console.log(Data)
-    return element;
-}
-  
-document.body.appendChild(component());
-if (module.hot) {
-   module.hot.accept('./print.js', function() {
-     console.log('Accepting the updated printMe module!');
-    printMe();
-    })
+    var mainTarget = {
+        id: 'main',
+        name: 'div',
+        className: 'main'
     }
+    var main = cdiv(mainTarget)
+    var titleTarget = {
+        id: 'title',
+        name: 'div',
+        className: 'title',
+        // innerText:'',  
+    }
+    var title = cdiv(titleTarget);
+    main.appendChild(title)
+    item_name.title_menu.map(function (item, index) {
+        var btnTarget = {
+            id: 'index' + index,
+            name: 'button',
+            className: 'title_menu',
+            innerText: item,
+            onclick:router,
+        }
+        var btn = cdiv(btnTarget);
+        title.appendChild(btn)
+    })
+    document.body.appendChild(main)
+}
+component()
+//默认首页
+index.index()
