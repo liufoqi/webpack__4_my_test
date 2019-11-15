@@ -1,0 +1,35 @@
+.main_index{
+    position: relative;
+    /* overflow: hidden; */
+}
+#animate_start_btn{
+    height: 40px;
+    width: 160px;
+    line-height: 40px;
+    /* margin: 0 10px 10px 0; */
+    background:#c93;
+    font-size: 16px;
+    border: none;
+    color:#fff;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 10px;
+    /* display: block; */
+}
+#animate_start_btn1{
+    height: 40px;
+    width: 160px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    background:#c93;
+    border: none;
+    color:#fff;
+    cursor: pointer;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 60px;
+    /* display: block; */
+}

@@ -17,7 +17,8 @@ var pageIndex = 0
 // changePage(0)
 var router=function changePage(e) {
     if (typeof e === 'number' && !pageIndex) {
-        page[0]()
+        page[e]()
+        pageIndex=e
     } else {
         var child=e.path[0]
         var i = 0;

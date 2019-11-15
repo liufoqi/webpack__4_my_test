@@ -33,4 +33,5 @@ function component() {
 }
 component()
 //默认首页
-index.index()
+router(1)
+

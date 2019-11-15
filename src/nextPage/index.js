@@ -1,5 +1,6 @@
-import '../css/main.css'
+import './index.css'
 import cdiv from '../createTarget/index'
+import animate from './animate'
 const nextPageId='nextPage'
 var nextPage=function nextPage(){
     var main =document.getElementById('main')
@@ -12,7 +13,9 @@ var nextPage=function nextPage(){
     var main_index=cdiv(main_indexTarget)
     // main_index.innerText='我是index页面'
     main.appendChild(main_index)
+    animate.animateElement()
 }
+
 export default  {
     nextPageId:nextPageId,
     nextPage:nextPage
