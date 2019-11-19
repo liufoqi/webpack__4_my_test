@@ -7,7 +7,7 @@ var threePage=function threePage(){
         id:threePageId,
         name:'div',
         className:'main_index',
-        innerText:'我是第三页'
+        innerText:''
      }
     var main_index=cdiv(main_indexTarget)
     // main_index.innerText='我是index页面'

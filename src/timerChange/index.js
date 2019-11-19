@@ -16,6 +16,7 @@ const timerChange=function timerChange(initialVelocity,acceleratedSpeed,executeC
      }
     var timer=setTimeout(function(){
       a+=b
+      
     },a)
 
 }

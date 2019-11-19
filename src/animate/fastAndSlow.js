@@ -1,8 +1,9 @@
+//frameRate 帧率过低会出现卡顿，默认60   animateTime 动画时长
 var fastAndSlow = function (frameRate, animateTime, total, fastTimes, priorityFast) {
     let f = frameRate ? frameRate : 30
     let time = animateTime ? animateTime : 3000
     let t = total ? total : 100
-    let fastT = fastTimes ? fastTimes : 1
+    let fastT = fastTimes ? fastTimes : 100
     let priority = priorityFast ? priorityFast : true
     var speedArray = []
     let totals = f * time / 1000 * (1 + fastT / 2)

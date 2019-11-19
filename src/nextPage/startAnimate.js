@@ -1,4 +1,4 @@
-import animate from './animate_rule'
+import animate from '../animate/index'
 import { totalmem } from 'os'
 const isAnimate ={}
 var startAnimate = function startAnimate(exerciseType,elementId) {

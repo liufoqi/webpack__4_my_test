@@ -10,7 +10,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Production'
+      title: '测试'
     }),
     new ExtractTextPlugin({
       filename:'static/css/[name].css'
@@ -51,6 +51,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
+              name: '[name].[ext]', //对打包后的图片命名
               outputPath: 'static/images',
             }
           }]
